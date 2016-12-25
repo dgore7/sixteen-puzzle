@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  background-color: white;
+  bot
+
+}
+
+body h1 {
+  margin: auto;
+  width: 643px;
+  padding: 15px 0px 10px 0px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+}
+
+div#content {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 600px;
+  border: 20px brown solid;
+
+  overflow: hidden;
+  padding: 3px 0px 0px 3px;
+}
+
+div.cell {
+  width: 25%;
+  height: 25%;
+  max-width: 144px;
+  max-height: 144px;
+  background-color: red;
+  display: inline-block;
+  margin: 1px;
+  border: 2px white solid;
+  text-align: center;
+  line-height: 148px;
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: bolder;
+  vertical-align: top;
+}
+
+div.empty-cell {
+  background-color: white;
+  display: inline-block;
+  min-width: 130px;
+  width: 25%;
+  height: 130px;
+}
