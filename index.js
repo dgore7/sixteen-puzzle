@@ -1,6 +1,6 @@
 const content = $('#content');
 let currentState;
-_isShuffling = false;
+let _isShuffling = false;
 
 class State {
   constructor(arr, isInitialConstruction) {
@@ -60,11 +60,11 @@ class State {
     for (let i = 0; i < iterations; i++) {
       (function (ms) {
         setTimeout(function () {
-          console.log("move = " + move + " and " + "prevMove = " + prevMove);
-          while (move == prevMove) {
+          console.log("move = " + move + " and prevMove = " + prevMove);
+          do {
             move = currentState._validMoves[Math.floor(Math.random() * currentState._validMoves.length)];
-          }
-          prevMove = move;
+          } while (move == prevMove);
+          prevMove = currentState._emptyIndex;
           currentState = currentState.makeMove(move);
         }, ms * 150);
       })(i);
